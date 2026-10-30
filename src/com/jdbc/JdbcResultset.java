@@ -14,7 +14,7 @@ public class JdbcResultset {
 		String user = "root";
 		String password = "123456";
 
-		String query = "select * from student";
+		String query = "select * from st";
 
 		// stage-1
 		try {
@@ -25,34 +25,21 @@ public class JdbcResultset {
 			// stage-3
 			ResultSet rs = st.executeQuery(query);
 			// stage-4
-			
+
 			System.out.println("ID \t name \t Marks \t Age");
 			while (rs.next()) {
-				int id=rs.getInt(1);
-				String name=rs.getString(2);
-				int marks=rs.getInt(3);
-				int age=rs.getInt(4);
-				
-				System.out.println(id+"\t"+name+"\t"+marks+"\t"+age);
-				
+				int id = rs.getInt(1);
+				String name = rs.getString(2);
+				int marks = rs.getInt(3);
+				int age = rs.getInt(4);
+
+				System.out.println(id + "\t" + name + "\t" + marks + "\t" + age);
+
 			}
-			   
-			   //stage-5:-
-			   connection.close();
-			   rs.close();
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+
+			// stage-5:-
+			connection.close();
+			rs.close();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

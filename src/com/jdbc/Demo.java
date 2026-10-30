@@ -14,9 +14,9 @@ public class Demo {
               String user="root";
               String password="123456";
               
-//              String query="insert into student values(102,'ramya',40,50)";
+              String query="insert into student values(103,'raju',10,50)";
 //              String query="update  into student set age=18 where id=101";
-              String query="delete from student where id =101";
+//              String query="delete from student where id =101";
               try {
             	  //stage-1:-
 			Connection connection=DriverManager.getConnection(URL,user,password);
@@ -25,7 +25,7 @@ public class Demo {
 		    Statement st=connection.createStatement();
 		    //stage-3:-
 		               int rows=  st.executeUpdate(query);
-		               System.out.println(rows+"deleted");
+		               System.out.println(rows+"inserted");
 		      
 		     //stage-5
 		               connection.close();
